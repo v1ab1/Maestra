@@ -4,6 +4,8 @@ function Header() {
     return (
       <div className={style.Header}>
         <div className={style.HeaderContent}>
+            <div classNmae={style.empty}>
+            </div>
             <svg className={style.logo} width="139" height="121" viewBox="0 0 139 121" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_133_129)">
                 <path d="M91.5887 6.02186H47.3551C44.7117 6.02186 42.5464 3.85512 42.5464 1.21C42.5464 0.534651 43.0807 0 43.7556 0H95.1882C95.8631 0 96.3973 0.534651 96.3973 1.21C96.3692 3.85512 94.2321 6.02186 91.5887 6.02186ZM44.065 1.51953C44.2337 3.17977 45.6397 4.50233 47.3269 4.50233H91.5606C93.276 4.50233 94.682 3.17977 94.8226 1.51953H44.065Z" fill="#DCAA72"/>
