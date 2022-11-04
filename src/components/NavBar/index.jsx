@@ -39,6 +39,27 @@ function NavBar() {
                   Callback
                 </span>
               </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="42"
+                height="28"
+                fill="none"
+                className="country-flag"
+                opacity="100%"
+                viewBox="0 0 42 28"
+              >
+                <g clipPath="url(#clip0_162_230)">
+                  <path fill="#F0F0F0" d="M0 .027v27.945h42V.027H0z"></path>
+                  <path fill="#0052B4" d="M42 .027H0v27.946h42V.027z"></path>
+                  <path fill="#F0F0F0" d="M42 .027H0v9.315h42V.027z"></path>
+                  <path fill="#FF3F61" d="M42 18.657H0v9.315h42v-9.315z"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_162_230">
+                    <rect width="42" height="28" fill="#fff" rx="4"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
           </div>
         </div>
       </div>
