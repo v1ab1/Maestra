@@ -28,16 +28,12 @@ function Slider() {
         <div style={{display: "none"}}>
             <img src={slider6} alt="" />
         </div>
-        <div className="leftArrow">
-            <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17 31L2 16L17 1" stroke="white" stroke-opacity="0.5" stroke-width="2"/>
-            </svg>
-        </div>
-        <div className="rightArrow">
-            <svg width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L16 16L1 31" stroke="white" stroke-opacity="0.5" stroke-width="2"/>
-            </svg> 
-        </div>
+        <svg className='leftArrow' width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 31L2 16L17 1" stroke="white" stroke-opacity="0.5" stroke-width="2"/>
+        </svg>
+        <svg className="rightArrow" width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L16 16L1 31" stroke="white" stroke-opacity="0.5" stroke-width="2"/>
+        </svg> 
       </div>
     );
   }
