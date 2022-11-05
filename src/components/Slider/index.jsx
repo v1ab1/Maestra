@@ -62,38 +62,64 @@ function Slider() {
         </div>
         <div className={style.bgBlack}></div>
         <div className={style.btns}>
-        <svg
-            onClick={() => nextSlide(-1)}
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="32"
-            fill="none"
-            className="leftArrow"
-            viewBox="0 0 18 32"
-            >
-            <path
-                stroke="#fff"
-                strokeOpacity="0.5"
-                strokeWidth="2"
-                d="M17 31L2 16 17 1"
-            ></path>
-        </svg>
-        <svg
-            onClick={() => nextSlide(1)}
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="32"
-            fill="none"
-            className="rightArrow"
-            viewBox="0 0 18 32"
-            >
-            <path
-                stroke="#fff"
-                strokeOpacity="0.5"
-                strokeWidth="2"
-                d="M1 1l15 15L1 31"
-            ></path>
-        </svg>
+            <svg
+                onClick={() => nextSlide(-1)}
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="32"
+                fill="none"
+                className="leftArrow"
+                viewBox="0 0 18 32"
+                >
+                <path
+                    stroke="#fff"
+                    strokeOpacity="0.5"
+                    strokeWidth="2"
+                    d="M17 31L2 16 17 1"
+                ></path>
+            </svg>
+            <svg
+                onClick={() => nextSlide(1)}
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="32"
+                fill="none"
+                className="rightArrow"
+                viewBox="0 0 18 32"
+                >
+                <path
+                    stroke="#fff"
+                    strokeOpacity="0.5"
+                    strokeWidth="2"
+                    d="M1 1l15 15L1 31"
+                ></path>
+            </svg>
+        </div>
+        <div>
+            <a href="">
+                Главная
+            </a>
+            <a href="">
+                Рестораны
+            </a>
+            <a href="">
+                Горные шале
+            </a>
+            <a href="">
+                Таунхаусы
+            </a>
+            <a href="">
+                Средиземноморские виллы
+            </a>
+            <a href="">
+                Загородные дома
+            </a>
+            <a href="">
+                Отели
+            </a>
+            <a href="">
+                Квартиры
+            </a>
         </div>
       </div>
     );
