@@ -8,33 +8,82 @@ function Slider() {
     const slider5 = './slider/slider5.jpg';
     const slider6 = './slider/slider6.jpeg';
 
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+
+    showSlider();
+
+    function nextSlide(A) {
+        slideIndex += A;
+        showSlider();
+        console.log(slideIndex);
+    }
+    
+    function CurrentSlide(A) {
+        slideIndex = A;
+        showSlider();
+    }
+    
+    function showSlider() {
+        (slideIndex >= 5) && (slideIndex = 0);
+        (slideIndex < 0) && (slideIndex = 4);
+        for (let i = 0; i < slides.length; i++) {
+            i == slideIndex ? slides[i].style.display = "block" : slides[i].style.display = "none";
+        }
+    }
+
     return (
       <div className={style.Slider}>
-        <div>
+        <div className="slide">
             <img src={slider1} alt="" />
         </div>
-        <div style={{display: "none"}}>
+        <div className="slide" style={{display: "none"}}>
             <img src={slider2} alt="" />
         </div>
-        <div style={{display: "none"}}>
+        <div className="slide" style={{display: "none"}}>
             <img src={slider3} alt="" />
         </div>
-        <div style={{display: "none"}}>
+        <div className="slide" style={{display: "none"}}>
             <img src={slider4} alt="" />
         </div>
-        <div style={{display: "none"}}>
+        <div className="slide" style={{display: "none"}}>
             <img src={slider5} alt="" />
         </div>
-        <div style={{display: "none"}}>
+        <div className="slide" style={{display: "none"}}>
             <img src={slider6} alt="" />
         </div>
+        <div className={style.bgBlack}></div>
         <div className={style.btns}>
-            <svg className='leftArrow' width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17 31L2 16L17 1" stroke="white" stroke-opacity="0.5" stroke-width="2"/>
-            </svg>
-            <svg className="rightArrow" width="18" height="32" viewBox="0 0 18 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 1L16 16L1 31" stroke="white" stroke-opacity="0.5" stroke-width="2"/>
-            </svg> 
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="32"
+            fill="none"
+            className="leftArrow"
+            viewBox="0 0 18 32"
+            >
+            <path
+                stroke="#fff"
+                strokeOpacity="0.5"
+                strokeWidth="2"
+                d="M17 31L2 16 17 1"
+            ></path>
+        </svg>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="32"
+            fill="none"
+            className="rightArrow"
+            viewBox="0 0 18 32"
+            >
+            <path
+                stroke="#fff"
+                strokeOpacity="0.5"
+                strokeWidth="2"
+                d="M1 1l15 15L1 31"
+            ></path>
+        </svg>
         </div>
       </div>
     );
