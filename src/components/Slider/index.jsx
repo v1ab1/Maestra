@@ -6,7 +6,9 @@ function Slider() {
     const slider3 = './slider/slider3.jpg';
     const slider4 = './slider/slider4.jpg';
     const slider5 = './slider/slider5.jpg';
-    const slider6 = './slider/slider6.jpeg';
+    const slider6 = './slider/slider6.jpg';
+    const slider7 = './slider/slider7.jpg';
+    const slider8 = './slider/slider8.jpeg';
 
     let slideIndex = 0;
     const slides = document.getElementsByClassName("slide");
@@ -25,8 +27,8 @@ function Slider() {
     }
     
     function showSlider() {
-        (slideIndex >= 5) && (slideIndex = 0);
-        (slideIndex < 0) && (slideIndex = 4);
+        (slideIndex >= 8) && (slideIndex = 0);
+        (slideIndex < 0) && (slideIndex = 7);
         for (let i = 0; i < slides.length; i++) {
             i == slideIndex ? slides[i].style.display = "block" : slides[i].style.display = "none";
         }
@@ -52,9 +54,16 @@ function Slider() {
         <div className="slide" style={{display: "none"}}>
             <img src={slider6} alt="" />
         </div>
+        <div className="slide" style={{display: "none"}}>
+            <img src={slider7} alt="" />
+        </div>
+        <div className="slide" style={{display: "none"}}>
+            <img src={slider8} alt="" />
+        </div>
         <div className={style.bgBlack}></div>
         <div className={style.btns}>
         <svg
+            onClick={() => nextSlide(-1)}
             xmlns="http://www.w3.org/2000/svg"
             width="18"
             height="32"
@@ -70,7 +79,7 @@ function Slider() {
             ></path>
         </svg>
         <svg
-            onClick={nextSlide(1)}
+            onClick={() => nextSlide(1)}
             xmlns="http://www.w3.org/2000/svg"
             width="18"
             height="32"
