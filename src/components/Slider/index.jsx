@@ -96,28 +96,28 @@ function Slider() {
             </svg>
         </div>
         <div className={style.navBar}>
-            <a href="">
+            <a onClick={() => CurrentSlide(0)} href="#">
                 Главная
             </a>
-            <a href="">
+            <a onClick={() => CurrentSlide(1)} href="#">
                 Рестораны
             </a>
-            <a href="">
+            <a onClick={() => CurrentSlide(2)} href="#">
                 Горные шале
             </a>
-            <a href="">
+            <a onClick={() => CurrentSlide(3)} href="#">
                 Таунхаусы
             </a>
-            <a href="">
+            <a onClick={() => CurrentSlide(4)} href="#">
                 Средиземноморские виллы
             </a>
-            <a href="">
+            <a onClick={() => CurrentSlide(5)} href="#">
                 Загородные дома
             </a>
-            <a href="">
+            <a onClick={() => CurrentSlide(6)} href="#">
                 Отели
             </a>
-            <a href="">
+            <a onClick={() => CurrentSlide(7)} href="#">
                 Квартиры
             </a>
         </div>
