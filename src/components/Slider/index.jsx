@@ -2,9 +2,9 @@ import { useState } from "react";
 import style from './Slider.module.sass';
 
 const Button = ({ isActive, onClick, index, text}) => (
-    <a href="#" className={isActive ? style.active : null } onClick={() => onClick(index)}>
+    <button className={isActive ? style.active : null } onClick={() => onClick(index)}>
         {text}
-    </a>
+    </button>
 );
 
 const Slider = () => {
