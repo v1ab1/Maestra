@@ -32,6 +32,7 @@ const Slider = () => {
                 <img src={`./slider/slider${activeIndex+1}.jpg`} alt="" />
             </div>
             <div className={style.bgBlack}></div>
+            <span className={style.text}>{data[activeIndex].text}</span>
             <div className={style.btns}>
                 <svg
                     onClick={() => setActiveIndex(activeIndex - 1)}
