@@ -2,7 +2,7 @@ import { useState } from "react";
 import style from './Slider.module.sass';
 
 const Button = ({ isActive, onClick, index, text}) => (
-    <a href="" className={isActive ? style.active : null } onClick={() => console.log(index)}>
+    <a href="#" className={isActive ? style.active : null } onClick={() => onClick(index)}>
         {text}
     </a>
 );
@@ -18,6 +18,13 @@ const Slider = () => {
         { text: "Загородные дома" }, 
         { text: "Отели" }, 
         { text: "Квартиры" }];
+
+    if (activeIndex < 0) {
+        setActiveIndex(7)
+    };
+    if (activeIndex > 7) {
+        setActiveIndex(0)
+    };
     
     return (
         <div className={style.Slider}>
@@ -60,16 +67,16 @@ const Slider = () => {
                 </svg>
             </div>
             <div className={style.navBar}>
-            {data.map((slide, index, text) => (
-            <Button
-                key={index}
-                index={index}
-                text={index}
-                isActive={index === activeIndex}
-                onClick={setActiveIndex}
-            />
-            ))}
-        </div>
+                {data.map((slide, index) => (
+                <Button
+                    key={index}
+                    index={index}
+                    text={slide.text}
+                    isActive={index === activeIndex}
+                    onClick={setActiveIndex}
+                />
+                ))}
+            </div>
         </div>
     );
 }
