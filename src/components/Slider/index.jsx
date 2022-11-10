@@ -9,16 +9,24 @@ function Slider() {
     const slider6 = './slider/slider6.jpg';
     const slider7 = './slider/slider7.jpg';
     const slider8 = './slider/slider8.jpeg';
+    const data = [
+        { name: "Рестораны" }, 
+        { name: "Горные шале" }, 
+        { name: "Таунхаусы" }, 
+        { name: "Средиземноморские виллы" }, 
+        { name: "Загородные дома" }, 
+        { name: "Отели" }, 
+        { name: "Квартиры" }];
 
     let slideIndex = 0;
     const slides = document.getElementsByClassName("slide");
+    const btns = document.getElementsByClassName("btn");
 
     showSlider();
 
     function nextSlide(A) {
         slideIndex += A;
         showSlider();
-        console.log(slideIndex);
     }
     
     function CurrentSlide(A) {
@@ -31,6 +39,7 @@ function Slider() {
         (slideIndex < 0) && (slideIndex = 7);
         for (let i = 0; i < slides.length; i++) {
             i == slideIndex ? slides[i].style.display = "block" : slides[i].style.display = "none";
+            i == slideIndex ? btns[i].classList = style.active : btns[i].classList = "btn";
         }
     }
 
@@ -96,28 +105,28 @@ function Slider() {
             </svg>
         </div>
         <div className={style.navBar}>
-            <a onClick={() => CurrentSlide(0)} href="#">
+            <a className={style.active} onClick={() => CurrentSlide(0)} href="#">
                 Главная
             </a>
-            <a onClick={() => CurrentSlide(1)} href="#">
+            <a className="btn" onClick={() => CurrentSlide(1)} href="#">
                 Рестораны
             </a>
-            <a onClick={() => CurrentSlide(2)} href="#">
+            <a className="btn" onClick={() => CurrentSlide(2)} href="#">
                 Горные шале
             </a>
-            <a onClick={() => CurrentSlide(3)} href="#">
+            <a className="btn" onClick={() => CurrentSlide(3)} href="#">
                 Таунхаусы
             </a>
-            <a onClick={() => CurrentSlide(4)} href="#">
+            <a className="btn" onClick={() => CurrentSlide(4)} href="#">
                 Средиземноморские виллы
             </a>
-            <a onClick={() => CurrentSlide(5)} href="#">
+            <a className="btn" onClick={() => CurrentSlide(5)} href="#">
                 Загородные дома
             </a>
-            <a onClick={() => CurrentSlide(6)} href="#">
+            <a className="btn" onClick={() => CurrentSlide(6)} href="#">
                 Отели
             </a>
-            <a onClick={() => CurrentSlide(7)} href="#">
+            <a className="btn" onClick={() => CurrentSlide(7)} href="#">
                 Квартиры
             </a>
         </div>

@@ -37,6 +37,7 @@
         background: rgba(0, 0, 0, 0.4)
         position: absolute
         bottom: 0
+        justify-content: center
         a
             font-weight: 450
             font-size: 18px
@@ -46,4 +47,20 @@
             text-transform: uppercase
             color: rgba(255, 255, 255, 0.8)
             text-decoration: none
-            padding: 12px 20px
+            padding: 12px 20px 8px 20px
+            border-bottom: 4px solid rgba(255,255,255,0.1)
+        .active
+            border-bottom: 4px solid #DCAA72
+            position: relative
+        .active::after
+            content: ""
+            display: block
+            width: 0
+            height: 0
+            border-style: solid
+            border-width: 0 4px 4px
+            border-color: transparent transparent #c7a677
+            position: absolute
+            bottom: 0
+            left: 50%
+            margin-left: -4px
