@@ -17,6 +17,22 @@
         letter-spacing: 0.14em
         text-transform: uppercase
         color: #DCAA72
+    .callback
+        position: absolute
+        background-color: transparent
+        bottom: 177px
+        border: 2px solid #DCAA72
+        border-radius: 10px
+        width: 270px
+        height: 59px
+        color: white
+        text-transform: uppercase
+        font-weight: 450
+        font-size: 18px
+        line-height: 23px
+        letter-spacing: 0.2em
+        -webkit-animation: slider-button-animation 3s infinite
+        animation: slider-button-animation 3s infinite
     div
         max-height: 684px
         max-width: 100%
@@ -84,3 +100,10 @@
             bottom: 0
             left: 50%
             margin-left: -4px
+@keyframes slider-button-animation
+    0%
+        box-shadow: none
+    50%
+        box-shadow: 0 5px 20px rgb(252, 152, 41)
+    100%
+        box-shadow: none
