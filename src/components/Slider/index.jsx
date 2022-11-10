@@ -60,11 +60,11 @@ const Slider = () => {
                 </svg>
             </div>
             <div className={style.navBar}>
-            {data.map((slide, index) => (
+            {data.map((slide, index, text) => (
             <Button
                 key={index}
                 index={index}
-                text={text}
+                text={index}
                 isActive={index === activeIndex}
                 onClick={setActiveIndex}
             />
