@@ -1,6 +1,14 @@
+import { useState } from "react";
 import style from './Slider.module.sass';
 
-function Slider() {
+const Button = ({ isActive, onClick, index }) => (
+    <a href="#" className={isActive ? style.active : null } onClick={() => onClick(index)}>
+        1
+    </a>
+);
+
+const Slider = () => {
+    const [activeIndex, setActiveIndex] = useState(0);
     const slider1 = './slider/slider1.png';
     const slider2 = './slider/slider2.jpg';
     const slider3 = './slider/slider3.jpg';
@@ -105,30 +113,14 @@ function Slider() {
             </svg>
         </div>
         <div className={style.navBar}>
-            <a className={style.active} onClick={() => CurrentSlide(0)} href="#">
-                Главная
-            </a>
-            <a className="btn" onClick={() => CurrentSlide(1)} href="#">
-                Рестораны
-            </a>
-            <a className="btn" onClick={() => CurrentSlide(2)} href="#">
-                Горные шале
-            </a>
-            <a className="btn" onClick={() => CurrentSlide(3)} href="#">
-                Таунхаусы
-            </a>
-            <a className="btn" onClick={() => CurrentSlide(4)} href="#">
-                Средиземноморские виллы
-            </a>
-            <a className="btn" onClick={() => CurrentSlide(5)} href="#">
-                Загородные дома
-            </a>
-            <a className="btn" onClick={() => CurrentSlide(6)} href="#">
-                Отели
-            </a>
-            <a className="btn" onClick={() => CurrentSlide(7)} href="#">
-                Квартиры
-            </a>
+            {data.map((slide, index) => (
+            <Button
+                key={index}
+                index={index}
+                isActive={index === activeIndex}
+                onClick={setActiveIndex}
+            />
+            ))}
         </div>
       </div>
     );
