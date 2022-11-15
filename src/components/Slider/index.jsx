@@ -18,13 +18,6 @@ const Slider = () => {
         { text: "Загородные дома" }, 
         { text: "Отели" }, 
         { text: "Квартиры" }];
-
-    if (activeIndex < 0) {
-        setActiveIndex(7)
-    };
-    if (activeIndex > 7) {
-        setActiveIndex(0)
-    };
     
     return (
         <div className={style.Slider}>
@@ -42,7 +35,7 @@ const Slider = () => {
             </div>
             <div className={style.btns}>
                 <svg
-                    onClick={() => setActiveIndex(activeIndex - 1)}
+                    onClick={() => activeIndex === 0 ? setActiveIndex(7) : setActiveIndex(activeIndex - 1)}
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="32"
@@ -58,7 +51,7 @@ const Slider = () => {
                     ></path>
                 </svg>
                 <svg
-                    onClick={() => setActiveIndex(activeIndex + 1)}
+                    onClick={() => activeIndex === 7 ? setActiveIndex(0) : setActiveIndex(activeIndex + 1)}
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="32"
