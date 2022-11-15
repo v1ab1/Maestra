@@ -25,7 +25,7 @@ const Slider = () => {
                 <img src={`./slider/slider${activeIndex+1}.jpg`} alt="" />
             </div>
             <div className={style.bgBlack}></div>
-            <div className={style.textWrapper}>
+            <div className={activeIndex === 0 ? style.textWrapperFirst + ' ' + style.textWrapper : style.textWrapper}>
                 <span className={style.text}>{activeIndex === 0 ? "Интерьеры для жизни придуманные вручную" : data[activeIndex].text}</span>
             </div>
             <div className={style.callbackWrapper}>
@@ -45,7 +45,7 @@ const Slider = () => {
                     >
                     <path
                         stroke="#fff"
-                        strokeOpacity="0.5"
+                        strokeOpacity="1"
                         strokeWidth="2"
                         d="M17 31L2 16 17 1"
                     ></path>
@@ -61,7 +61,7 @@ const Slider = () => {
                     >
                     <path
                         stroke="#fff"
-                        strokeOpacity="0.5"
+                        strokeOpacity="1"
                         strokeWidth="2"
                         d="M1 1l15 15L1 31"
                     ></path>
