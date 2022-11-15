@@ -32,7 +32,9 @@ const Slider = () => {
                 <img src={`./slider/slider${activeIndex+1}.jpg`} alt="" />
             </div>
             <div className={style.bgBlack}></div>
-            <span className={style.text}>{activeIndex === 0 ? "Интерьеры для жизни придуманные вручную" : data[activeIndex].text}</span>
+            <div className={style.textWrapper}>
+                <span className={style.text}>{activeIndex === 0 ? "Интерьеры для жизни придуманные вручную" : data[activeIndex].text}</span>
+            </div>
             <div className={style.callbackWrapper}>
                 <button className={style.callback}>
                     Оставить заявку
