@@ -33,9 +33,11 @@ const Slider = () => {
             </div>
             <div className={style.bgBlack}></div>
             <span className={style.text}>{activeIndex === 0 ? "Интерьеры для жизни придуманные вручную" : data[activeIndex].text}</span>
-            <button className={style.callback}>
-                Оставить заявку
-            </button>
+            <div className={style.callbackWrapper}>
+                <button className={style.callback}>
+                    Оставить заявку
+                </button>
+            </div>
             <div className={style.btns}>
                 <svg
                     onClick={() => setActiveIndex(activeIndex - 1)}
