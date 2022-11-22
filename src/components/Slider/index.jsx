@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import style from './Slider.module.sass';
 
 const Button = ({ isActive, onClick, index, text}) => (
@@ -18,7 +18,11 @@ const Slider = () => {
         { text: "Загородные дома" }, 
         { text: "Отели" }, 
         { text: "Квартиры" }];
-    
+    useEffect(() => {
+        const timer = setInterval(() => setActiveIndex(activeIndex + 1), 5000);
+        // clearInterval(timer);
+        // timer();
+    }, [activeIndex]);
     return (
         <div className={style.Slider}>
             <div className="slide">
