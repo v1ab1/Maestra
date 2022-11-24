@@ -9,6 +9,7 @@ const Button = ({ isActive, onClick, index, text}) => (
 
 const Slider = () => {
     const [activeIndex, setActiveIndex] = useState(0);
+    const [scale, setScale] = useState(style.scale);
     const data = [
         { text: "Главная" }, 
         { text: "Рестораны" }, 
@@ -21,32 +22,18 @@ const Slider = () => {
     const change = (a = 1) => {
         if (activeIndex === 7 && a === 1) {
             setActiveIndex(0)
-            clearInterval(timer);
-            makeTimer();
             return
         }
         if (activeIndex === 0 && a === -1) {
             setActiveIndex(7)
-            clearInterval(timer);
-            makeTimer();
             return
         }
         setActiveIndex( activeIndex + a );
-        clearInterval(timer);
-        makeTimer();
     }
-    let timer = 0;
-
-    const makeTimer = () => {
-        clearInterval(timer);
-        timer = setInterval(() => setActiveIndex(activeIndex + 1),6500);
-    }
-
-    makeTimer();
     return ( 
         <div className={style.Slider}>
-            <div className="slide">
-                <img src={`./slider/slider${activeIndex+1}.jpg`} alt="" />
+            <div className={style.slide}>
+                <img className={scale} src={`./slider/slider${activeIndex+1}.jpg`} alt="" />
             </div>
             <div className={style.bgBlack}></div>
             <div className={activeIndex === 0 ? style.textWrapperFirst + ' ' + style.textWrapper : style.textWrapper}>
