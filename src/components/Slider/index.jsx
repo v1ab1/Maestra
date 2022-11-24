@@ -18,12 +18,32 @@ const Slider = () => {
         { text: "Загородные дома" }, 
         { text: "Отели" }, 
         { text: "Квартиры" }];
-    useEffect(() => {
-        const timer = setInterval(() => setActiveIndex(activeIndex + 1), 5000);
-        // clearInterval(timer);
-        // timer();
-    }, [activeIndex]);
-    return (
+    const change = (a = 1) => {
+        if (activeIndex === 7 && a === 1) {
+            setActiveIndex(0)
+            clearInterval(timer);
+            makeTimer();
+            return
+        }
+        if (activeIndex === 0 && a === -1) {
+            setActiveIndex(7)
+            clearInterval(timer);
+            makeTimer();
+            return
+        }
+        setActiveIndex( activeIndex + a );
+        clearInterval(timer);
+        makeTimer();
+    }
+    let timer = 0;
+
+    const makeTimer = () => {
+        clearInterval(timer);
+        timer = setInterval(() => setActiveIndex(activeIndex + 1),6500);
+    }
+
+    makeTimer();
+    return ( 
         <div className={style.Slider}>
             <div className="slide">
                 <img src={`./slider/slider${activeIndex+1}.jpg`} alt="" />
@@ -39,7 +59,7 @@ const Slider = () => {
             </div>
             <div className={style.btns}>
                 <svg
-                    onClick={() => activeIndex === 0 ? setActiveIndex(7) : setActiveIndex(activeIndex - 1)}
+                    onClick={() => change(-1)}
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="32"
@@ -55,7 +75,7 @@ const Slider = () => {
                     ></path>
                 </svg>
                 <svg
-                    onClick={() => activeIndex === 7 ? setActiveIndex(0) : setActiveIndex(activeIndex + 1)}
+                    onClick={() => change()}
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
                     height="32"
