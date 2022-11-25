@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Chooser } from '../Chooser';
 import style from './NavBar.module.sass';
 
 function NavBar() {
@@ -45,7 +46,7 @@ function NavBar() {
                 Обратный звонок
               </span>
             </button>
-            <div style={position: "relative"}>
+            <div style={{position: "relative", height: "100%", width: "42px"}}>
               <svg
                 onClick={() => setShow(!show)}
                 xmlns="http://www.w3.org/2000/svg"
@@ -68,9 +69,7 @@ function NavBar() {
                   </clipPath>
                 </defs>
               </svg>
-              <div className={style.countryChoose}>
-
-              </div>
+              <Chooser />
             </div>
 
         </div>
