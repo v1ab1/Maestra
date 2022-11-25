@@ -11,6 +11,7 @@ const Slider = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [scale, setScale] = useState(null);
     const [showBack, setShowBack] = useState(true);
+    const [opacity, setOpacity] = useState(style.opacityUp);
     const data = [
         { text: "Главная" }, 
         { text: "Рестораны" }, 
@@ -21,16 +22,17 @@ const Slider = () => {
         { text: "Отели" }, 
         { text: "Квартиры" }];
     const change = (a = 1) => {
-        if (a === 1 ) {
-            setShowBack(true)
-        } else {
-            setShowBack(false)
-        }
+        // if (a === 1 ) {
+        //     setShowBack(true)
+        // } else {
+        //     setShowBack(false)
+        // }
         setScale(null)
-        console.log(scale)
+        setOpacity(style.opacityDown);
+        setTimeout(() => setOpacity(style.opacityUp), 500)
         // clearInterval(timer)
         setTimeout(() => setScale(style.scale), 500)
-        if (activeIndex === 7 && a === 1) {
+        setTimeout(() => {if (activeIndex === 7 && a === 1) {
             setActiveIndex(0)
             return
         }
@@ -38,7 +40,7 @@ const Slider = () => {
             setActiveIndex(7)
             return
         }
-        setActiveIndex( activeIndex + a );
+        setActiveIndex( activeIndex + a );}, 500)
     }
     useEffect(() => {
       setScale(style.scale)
@@ -47,7 +49,7 @@ const Slider = () => {
     return ( 
         <div className={style.Slider}>
             <div className={style.slide}>
-                <img className={scale} src={`./slider/slider${activeIndex+1}.jpg`} alt="" />
+                <img className={[scale].join(' ')} src={`./slider/slider${activeIndex+1}.jpg`} alt="" />
                 {/* {showBack ? <img className={style.slideBG} style={showBack ? {opacity: 1} : {opacity: 0}} src={`./slider/slider${activeIndex+2}.jpg`} alt="" />
                 : <img className={style.slideBG} style={showBack ? {opacity: 0} : {opacity: 1}} src={`./slider/slider${activeIndex}.jpg`} alt="" />} */}
             </div>
