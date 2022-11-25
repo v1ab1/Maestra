@@ -10,6 +10,7 @@ const Button = ({ isActive, onClick, index, text}) => (
 const Slider = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [scale, setScale] = useState(null);
+    const [showBack, setShowBack] = useState(true);
     const data = [
         { text: "Главная" }, 
         { text: "Рестораны" }, 
@@ -20,6 +21,11 @@ const Slider = () => {
         { text: "Отели" }, 
         { text: "Квартиры" }];
     const change = (a = 1) => {
+        if (a === 1 ) {
+            setShowBack(true)
+        } else {
+            setShowBack(false)
+        }
         setScale(null)
         console.log(scale)
         // clearInterval(timer)
@@ -42,6 +48,8 @@ const Slider = () => {
         <div className={style.Slider}>
             <div className={style.slide}>
                 <img className={scale} src={`./slider/slider${activeIndex+1}.jpg`} alt="" />
+                {/* {showBack ? <img className={style.slideBG} style={showBack ? {opacity: 1} : {opacity: 0}} src={`./slider/slider${activeIndex+2}.jpg`} alt="" />
+                : <img className={style.slideBG} style={showBack ? {opacity: 0} : {opacity: 1}} src={`./slider/slider${activeIndex}.jpg`} alt="" />} */}
             </div>
             <div className={style.bgBlack}></div>
             <div className={activeIndex === 0 ? style.textWrapperFirst + ' ' + style.textWrapper : style.textWrapper}>
