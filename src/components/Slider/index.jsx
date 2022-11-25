@@ -9,7 +9,7 @@ const Button = ({ isActive, onClick, index, text}) => (
 
 const Slider = () => {
     const [activeIndex, setActiveIndex] = useState(0);
-    const [scale, setScale] = useState(style.scale);
+    const [scale, setScale] = useState(null);
     const data = [
         { text: "Главная" }, 
         { text: "Рестораны" }, 
@@ -20,6 +20,10 @@ const Slider = () => {
         { text: "Отели" }, 
         { text: "Квартиры" }];
     const change = (a = 1) => {
+        setScale(null)
+        console.log(scale)
+        // clearInterval(timer)
+        setTimeout(() => setScale(style.scale), 500)
         if (activeIndex === 7 && a === 1) {
             setActiveIndex(0)
             return
@@ -30,6 +34,10 @@ const Slider = () => {
         }
         setActiveIndex( activeIndex + a );
     }
+    useEffect(() => {
+      setScale(style.scale)
+    }, [])
+    // let timer = setInterval(() => {activeIndex === 7 ? setActiveIndex(0) : setActiveIndex(activeIndex + 1)}, 6500);
     return ( 
         <div className={style.Slider}>
             <div className={style.slide}>
