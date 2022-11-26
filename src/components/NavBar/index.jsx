@@ -69,7 +69,7 @@ function NavBar() {
                   </clipPath>
                 </defs>
               </svg>
-              <Chooser />
+              {show ? <Chooser /> : null}
             </div>
 
         </div>
