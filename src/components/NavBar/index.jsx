@@ -69,6 +69,7 @@ function NavBar() {
                   </clipPath>
                 </defs>
               </svg>
+              {show ? <div onClick={() => setShow(!show)} className={style.empty} /> : null}
               {show ? <Chooser /> : null}
             </div>
 
