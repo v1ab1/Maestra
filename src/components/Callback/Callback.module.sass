@@ -1,0 +1,43 @@
+.Callback
+    width: 100vw
+    height: 100vh
+    background: rgba(0,0,0,0.8)
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 141
+    display: flex
+    justify-content: center
+    align-items: center
+    .callbackContent
+        background-color: #81766D
+        padding: 10px
+        display: flex
+        flex-direction: column
+        .cross
+            display: flex
+            justify-content: flex-end
+        .description
+            padding: 0 15px 0 15px
+            font-size: 18px
+            color: #fff
+            text-align: center
+            margin: 10px 0 30px 0
+        .formName
+            .cbkName
+                width: 100%
+                background: transparent
+                border: 0
+                outline: 0
+                font-weight: 450
+                caret-color: white
+                font-size: 28px
+                line-height: 36px
+                padding-bottom: 10px
+                color: white
+                border-bottom: 2px solid rgba(255, 255, 255, 0.5)
+        .formName:hover
+            .cbkName
+                border-bottom: 2px solid white
+            .cbkLabel
+                color: white

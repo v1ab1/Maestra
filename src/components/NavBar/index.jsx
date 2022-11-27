@@ -72,7 +72,6 @@ function NavBar() {
               {show ? <div onClick={() => setShow(!show)} className={style.empty} /> : null}
               {show ? <Chooser /> : null}
             </div>
-
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import NavBar from './components/NavBar';
 import Slider from './components/Slider';
+import { Callback } from './components/Callback';
 
 import logo from './logo.svg';
 
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <NavBar />
       <Slider />
+      <Callback />
     </div>
   );
 }
