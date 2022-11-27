@@ -19,7 +19,12 @@ export const Callback = () => {
                     <label className={style.cbkLabel} htmlFor="name">Имя</label>
                     <input className={style.cbkName} id="name" type="text" value="" />
                 </div>
+                <div className={style.formName}>
+                    <label className={style.cbkLabel} htmlFor="phone">Телефон</label>
+                    <input className={style.cbkName} id="phone" type="number" value="" />
+                </div>
             </div>
+            <input className={style.cbkButton} type="submit" value="Отправить" />
         </div>
     </div>
   );
