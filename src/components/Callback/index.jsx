@@ -1,7 +1,9 @@
+import { useRef } from 'react';
 import style from './Callback.module.sass';
 
 export const Callback = () => {
-  return (
+    const name = useRef(null);
+    return (
     <div className={style.Callback}>
         <div className={style.callbackContent}>
             <div className={style.cross}>
@@ -14,8 +16,8 @@ export const Callback = () => {
             </p>
             <div style={{padding: "0 15px"}}>
                 <div className={style.formName}>
-                    <label className={style.cbkLabel} for="cbk-name">Имя</label>
-                    <input class="cbkName" type="text" value="" />
+                    <label className={style.cbkLabel} htmlFor="name">Имя</label>
+                    <input className={style.cbkName} id="name" type="text" value="" />
                 </div>
             </div>
         </div>
