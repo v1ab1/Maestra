@@ -1,8 +1,6 @@
-import { useRef } from 'react';
 import style from './Callback.module.sass';
 
 export const Callback = () => {
-    const name = useRef(null);
     return (
     <div className={style.Callback}>
         <div className={style.callbackContent}>
