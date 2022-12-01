@@ -13,9 +13,9 @@ export const Callback = () => {
                 Пожалуйста оставьте свои контакты, чтобы наши специалисты связались с вами.
             </p>
             <div style={{padding: "0 15px"}}>
-                <div className={style.formName + ' ' + style.first}>
-                    <label className={style.cbkLabel} htmlFor="name">Имя</label>
-                    <input className={style.cbkName} id="name" type="text" value="" />
+                <div className={style.formName}>
+                    <label className={style.cbkLabel} id="nameLabel" htmlFor="name">Имя</label>
+                    <input className={style.cbkName} id="name" htmlFor="nameLabel" type="text" value="" />
                 </div>
                 <div className={style.formName}>
                     <label className={style.cbkLabel} htmlFor="phone">Телефон</label>
