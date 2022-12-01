@@ -2,7 +2,8 @@ import style from './Callback.module.sass';
 
 export const Callback = ({setShowCbk}) => {
     return (
-    <div className={style.Callback} onClick={() => setShowCbk(false)}>
+    <div className={style.Callback}>
+        <div onClick={() => setShowCbk(false)} className={style.empty}></div>
         <div className={style.callbackContent}>
             <div className={style.cross} onClick={() => setShowCbk(false)}>
                 <svg className={style.cross} id="dropdown_icon2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

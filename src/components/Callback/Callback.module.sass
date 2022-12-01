@@ -9,12 +9,19 @@
     display: flex
     justify-content: center
     align-items: center
+    .empty
+        position: absolute
+        width: 100vw
+        height: 100vh
+        top: 0
+        left: 0
+        z-index: 142
     .callbackContent
         background-color: #81766D
         padding: 10px
         display: flex
         flex-direction: column
-        z-index: 142
+        z-index: 143
         .cross
             display: flex
             justify-content: flex-end
@@ -69,6 +76,8 @@
             border: 0
             outline: 0
             max-width: 260px
+            font-family: 'Futura PT', Helvetica, Arial, sans-serif
+            margin-bottom: 20px
         .cbkButton:hover
             background-color: #F4AD5C
             box-shadow: 0 5px 20px rgb(244, 173, 92)
