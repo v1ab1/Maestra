@@ -16,11 +16,11 @@ export const Callback = ({setShowCbk}) => {
             <div style={{padding: "0 15px"}}>
                 <div className={style.formName}>
                     <label className={style.cbkLabel} id="nameLabel" htmlFor="name">Имя</label>
-                    <input className={style.cbkName} id="name" htmlFor="nameLabel" type="text" value="" />
+                    <input className={style.cbkName} id="name" htmlFor="nameLabel" type="text" placeholder="" />
                 </div>
                 <div className={style.formName}>
                     <label className={style.cbkLabel} htmlFor="phone">Телефон</label>
-                    <input className={style.cbkName} id="phone" type="number" value="" />
+                    <input className={style.cbkName} id="phone" type="number" placeholder="" />
                 </div>
             </div>
             <input className={style.cbkButton} type="submit" value="Отправить" />
