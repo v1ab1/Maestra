@@ -13,7 +13,7 @@ export const Callback = () => {
                 Пожалуйста оставьте свои контакты, чтобы наши специалисты связались с вами.
             </p>
             <div style={{padding: "0 15px"}}>
-                <div className={style.formName}>
+                <div className={style.formName + ' ' + style.first}>
                     <label className={style.cbkLabel} htmlFor="name">Имя</label>
                     <input className={style.cbkName} id="name" type="text" value="" />
                 </div>
