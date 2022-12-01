@@ -7,7 +7,7 @@ const Button = ({ isActive, onClick, index, text}) => (
     </button>
 );
 
-const Slider = () => {
+export const Slider = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [scale, setScale] = useState(null);
     const [showBack, setShowBack] = useState(true);
@@ -110,5 +110,3 @@ const Slider = () => {
         </div>
     );
 }
-
-export default Slider;

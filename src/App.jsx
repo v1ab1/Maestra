@@ -1,17 +1,17 @@
-import Header from './components/Header';
-import NavBar from './components/NavBar';
-import Slider from './components/Slider';
+import { useState } from 'react';
+import { Header } from './components/Header';
+import { NavBar } from './components/NavBar';
+import { Slider } from './components/Slider';
 import { Callback } from './components/Callback';
 
-import logo from './logo.svg';
-
 function App() {
+  const [showCbk, setShowCbk] = useState(false);
   return (
     <div className="App">
       <Header />
-      <NavBar />
+      <NavBar setShowCbk={setShowCbk} />
       <Slider />
-      <Callback />
+      {showCbk ? <Callback setShowCbk={setShowCbk} /> : null}
     </div>
   );
 }

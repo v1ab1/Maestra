@@ -1,6 +1,6 @@
 import style from './Header.module.sass';
 
-function Header() {
+export const Header = () => {
     return (
       <div className={style.Header}>
         <div className={style.HeaderContent}>
@@ -53,5 +53,3 @@ function Header() {
       </div>
     );
   }
-  
-export default Header;
