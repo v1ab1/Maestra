@@ -14,7 +14,7 @@ function App() {
       <NavBar setShowCbk={setShowCbk} />
       <Slider />
       {showCbk ? <Callback setShowCbk={setShowCbk} setShowFinalCbk={setShowFinalCbk} /> : null}
-      {showFinalCbk ? <CallbackFinal /> : null}
+      {showFinalCbk ? <CallbackFinal setShowFinalCbk={setShowFinalCbk} /> : null}
     </div>
   );
 }
