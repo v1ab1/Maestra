@@ -12,6 +12,7 @@ export const Slider = () => {
     const [scale, setScale] = useState(null);
     const [showBack, setShowBack] = useState(true);
     const [opacity, setOpacity] = useState(style.opacityUp);
+    const [timerId, setTimerId] = useState();
     const data = [
         { text: "Главная" }, 
         { text: "Рестораны" }, 
@@ -22,15 +23,9 @@ export const Slider = () => {
         { text: "Отели" }, 
         { text: "Квартиры" }];
     const change = (a = 1) => {
-        // if (a === 1 ) {
-        //     setShowBack(true)
-        // } else {
-        //     setShowBack(false)
-        // }
         setScale(null)
         setOpacity(style.opacityDown);
         setTimeout(() => setOpacity(style.opacityUp), 500)
-        // clearInterval(timer)
         setTimeout(() => setScale(style.scale), 500)
         setTimeout(() => {if (activeIndex === 7 && a === 1) {
             setActiveIndex(0)
@@ -45,7 +40,14 @@ export const Slider = () => {
     useEffect(() => {
       setScale(style.scale)
     }, [])
-    // let timer = setInterval(() => {activeIndex === 7 ? setActiveIndex(0) : setActiveIndex(activeIndex + 1)}, 6500);
+    useEffect(() => {
+        clearTimeout(timerId);
+        setTimerId(
+        setTimeout(() => {
+            change();
+        }, 6000)
+        );
+    }, [activeIndex]);
     return ( 
         <div className={style.Slider}>
             <div className={style.slide}>
