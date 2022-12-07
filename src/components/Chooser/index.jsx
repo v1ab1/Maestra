@@ -4,8 +4,8 @@ export const Chooser = () => {
   return (
     <div className={style.Chooser} style={{width: "unset", gap: "unset", display: "block", height: "unset"}}>
       <div className={style.chooserContent} style={{width: "unset", gap: "unset", display: "block"}}>
-        <a href="./eng.html" class="desktop-country">
-          <div>
+        <a href="#">
+          <div className={style.flag}>
               <svg width="42" height="28" viewBox="0 0 42 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_30_87)">
                   <path d="M42 0H0V28.0003H42V0Z" fill="#F0F0F0"/>
@@ -34,12 +34,12 @@ export const Chooser = () => {
                   </defs>
               </svg>
           </div>
-          <div class="desktop-country-text">
+          <div>
               ENG
           </div>
         </a>
-        <a href="./fr.html" class="desktop-country">
-          <div>
+        <a href="#">
+          <div className={style.flag}>
               <svg width="42" height="28" viewBox="0 0 42 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_30_111)">
                   <path d="M42 27.9719H0V0.0261993H42V27.9719Z" fill="#F0F0F0"/>
@@ -53,12 +53,12 @@ export const Chooser = () => {
                   </defs>
               </svg>                                
           </div>
-          <div class="desktop-country-text">
+          <div>
               FR
           </div>
         </a>
-        <a href="./uae.html" class="desktop-country">
-          <div>
+        <a href="#">
+          <div className={style.flag}>
               <svg width="42" height="28" viewBox="0 0 42 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clip-path="url(#clip0_30_115)">
                   <path d="M42 0.0280762H0V27.9738H42V0.0280762Z" fill="#F0F0F0"/>
@@ -73,7 +73,7 @@ export const Chooser = () => {
                   </defs>
               </svg>                                
           </div>
-          <div class="desktop-country-text">
+          <div>
               UAE
           </div>
         </a>
