@@ -6,7 +6,7 @@ import { CallbackFinal } from './components/CallbackFinal';
 import { Slider } from './components/Slider';
 import { About } from './components/About';
 
-function App() {
+export const App = () => {
   const [showCbk, setShowCbk] = useState(false);
   const [showFinalCbk, setShowFinalCbk] = useState(false);
   return (
@@ -20,5 +20,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
