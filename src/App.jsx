@@ -18,7 +18,7 @@ export const App = () => {
       {showFinalCbk ? <CallbackFinal setShowFinalCbk={setShowFinalCbk} /> : null}
       <Slider />
       <About />
-      <Label />
+      <Label setShowCbk={setShowCbk} />
     </div>
   );
 }
