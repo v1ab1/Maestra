@@ -5,6 +5,7 @@ import { Callback } from './components/Callback';
 import { CallbackFinal } from './components/CallbackFinal';
 import { Slider } from './components/Slider';
 import { About } from './components/About';
+import { Label } from './components/Label';
 
 export const App = () => {
   const [showCbk, setShowCbk] = useState(false);
@@ -17,6 +18,7 @@ export const App = () => {
       {showFinalCbk ? <CallbackFinal setShowFinalCbk={setShowFinalCbk} /> : null}
       <Slider />
       <About />
+      <Label />
     </div>
   );
 }
